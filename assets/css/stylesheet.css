@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: whitesmoke;
+    background-color: #dddddd;
 }
 
 textarea{
@@ -13,16 +13,19 @@ textarea{
 }
 
 @keyframes cards {
-    from{opacity: 0.6 ; transform:  scale(1)}
-    to{opacity: 1; transform: scale(1.05)}
+    from{ transform:  scale(1)}
+    to{transform: scale(1.05)}
+}
+
+.card-container{
+    transform: scale(1);
+    margin-bottom: 1em;
 }
 
 .system-card{
     display: inline-block;
     border-radius: 0.3em;
-    margin-bottom: 1em;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.2);
-    opacity: 0.6;
 }
 
 .card-img{
@@ -39,20 +42,24 @@ textarea{
     animation-duration: 0.1s;
 }
 
+.system-card :hover ~ .card-footer{
+    display: block;
+}
+
 .card-footer{
+    display: none;
+    position: absolute;
     bottom: 0;
-    color: whitesmoke;
-    background-color: #444444;
+    color: #333333;
+    background-color: #eeeeee;
     text-align: center;
     width: 100%;
     border-bottom-left-radius: 0.3em;
     border-bottom-right-radius: 0.3em;
+    opacity: 0.95;
 
 }
 
-.card-footer h3{
-    margin: 0;
-}
 
 .modal-header{
     border-color: #1565C0;
