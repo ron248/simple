@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>simple</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-rtl.min.css">
+    <link rel="stylesheet" href="assets/css/stylesheet.css">
+
+    <script src="assets/libs/jquery-2.1.4.min.js"></script>
+    <script src="assets/libs/bootstrap.min.js"></script>
+    <script src="assets/libs/angular.min.js"></script>
+    <script src="assets/libs/ui-bootstrap-tpls-0.14.3.min.js"></script>
+    <script src="assets/libs/angular-ui-router.min.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/components/homepage/homepageController.js"></script>
+    <script src="app/app.routes.js"></script>
+    <script src="app/components/systemPage/problemPage/problemController.js"></script>
+    <script src="app/shared/localStorageService/localStorageService.js"></script>
+    <script src="app/components/systemPage/queryPage/queryController.js"></script>
+    <script src="app/components/systemPage/drawPage/drawController.js"></script>
+
+
+</head>
+<body>
+
+
+<div ng-controller="mainController">
+<nav class="navbar navbar-inverse">
+    <ul class="nav navbar-nav">
+        <li><a href="#">סקריפטים</a></li>
+        <li><a href="#">שליפות</a></li>
+    </ul>
+</nav>
+
+<div ui-view></div>
+</div>
+</body>
+</html>

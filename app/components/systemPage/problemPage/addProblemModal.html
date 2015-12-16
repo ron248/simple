@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form name="addProblemForm" novalidate ng-submit="addProblem()" class="form" method="post">
+    <div class="modal-header">
+        <h2 class="text-center">הוספת תקלה</h2>
+    </div>
+
+    <div class="modal-body">
+        <div ng-class="{'has-error': addProblemForm.symptom.$invalid && addProblemForm.symptom.$dirty}">
+            <lable name="symptom" class="control-label"><h4 class="text-center">סימפטום התקלה</h4></lable>
+            <div>
+                <input type="text" name="symptom" class="form-control" ng-model-options="{updateOn: 'blur'}" ng-model="problem.symptom" ng-minlength="15" required placeholder="סימפטום התקלה">
+            </div>
+        </div>
+        <div ng-class="{'has-error': addProblemForm.solution.$invalid && addProblemForm.solution.$dirty}">
+            <lable name="solution" class="control-label"><h4 class="text-center">הסבר ופתרון</h4></lable>
+            <div>
+                <textarea class="form-control solution-text-area" name="solution" ng-model-options="{updateOn: 'blur'}" ng-model="problem.solution" ng-minlength="50" required  placeholder="הכנס כאן הסבר מפורט על התקלה ופרט את כל שלבי הפתרון"></textarea>
+            </div>
+        </div>
+
+        <div class="alert-danger verify-err">
+            <div ng-show="addProblemForm.symptom.$invalid && addProblemForm.symptom.$dirty">סימפטום התקלה צריך להכיל 15 תווים לפחות</div>
+            <div ng-show="addProblemForm.solution.$invalid && addProblemForm.solution.$dirty">ההסבר צריך להיות מפורט ולהכיל לפחות 50 תווים</div>
+        </div>
+
+    </div>
+
+    <button type="submit" class="modal-submit-btn btn btn-block">הוסף תקלה</button>
+
+</form>
+</body>
+</html>

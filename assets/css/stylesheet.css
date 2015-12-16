@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+textarea{
+    resize: none;
+}
+
+@keyframes cards {
+    from{opacity: 0.6 ; transform:  scale(1)}
+    to{opacity: 1; transform: scale(1.05)}
+}
+
+.system-card{
+    display: inline-block;
+    border-radius: 0.3em;
+    margin-bottom: 1em;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+    opacity: 0.6;
+}
+
+.card-img{
+    width: 100%;
+    border-top-left-radius: 0.3em;
+    border-top-right-radius: 0.3em;
+}
+
+
+.system-card:hover {
+    /* Toggle our animation play state to running when we are hovering over our sticker */
+    animation-name: cards;
+    animation-fill-mode: forwards;
+    animation-duration: 0.1s;
+}
+
+.card-footer{
+    bottom: 0;
+    color: whitesmoke;
+    background-color: #444444;
+    text-align: center;
+    width: 100%;
+    border-bottom-left-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+
+}
+
+.card-footer h3{
+    margin: 0;
+}
+
+.modal-header{
+    border-color: #1565C0;
+    padding: 0;
+}
+
+.solution-text-area{
+    height: 20em !important;
+}
+
+.modal-submit-btn{
+    color: whitesmoke;
+    border: none;
+    background-color: #1565C0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.verify-err{
+    margin-top: 1em;
+}
+
+.query-exp-text-area{
+    height: 10em !important;
+}
+
+.query-text-area{
+    height: 15em !important;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form name="addDrawForm" novalidate ng-submit="addDraw()" class="form" method="post">
+    <div class="modal-header">
+        <h2 class="text-center">הוספת שרטוט</h2>
+    </div>
+
+    <div class="modal-body">
+        <div ng-class="{'has-error': addDrawForm.name.$invalid && addDrawForm.name.$dirty}">
+            <lable name="name" class="control-label"><h4 class="text-center">שם המסלול</h4></lable>
+            <div>
+                <input type="text" name="name" class="form-control" ng-model-options="{updateOn: 'blur'}" ng-model="draw.name" ng-minlength="3" required placeholder="שם המסלול">
+            </div>
+        </div>
+        <div>
+            <input type="file" required>
+        </div>
+
+        <div class="alert-danger verify-err">
+            <div ng-show="addDrawForm.name.$invalid && addDrawForm.name.$dirty">שם השרטוט חייב לכיל 3 תווים לפחות</div>
+        </div>
+
+    </div>
+
+    <button type="submit" class="modal-submit-btn btn btn-block">הוסף שרטוט</button>
+
+</form>
+</body>
+</html>
