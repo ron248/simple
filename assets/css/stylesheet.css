@@ -8,6 +8,25 @@ body{
     background-color: #dddddd;
 }
 
+.nav-stacked{
+    background-color: #1976D2;
+    border-radius: 0.3em;
+}
+
+.nav-stacked a{
+    color: whitesmoke;
+    text-align: center;
+    font-size: medium;
+}
+
+.nav-stacked >li>a:hover {
+    background-color:#2196F3;
+}
+
+.nav-stacked >li>a:focus {
+    background-color:#2196F3;
+}
+
 textarea{
     resize: none;
 }
@@ -43,15 +62,14 @@ textarea{
 }
 
 .system-card :hover ~ .card-footer{
-    display: block;
+    display: none;
 }
 
 .card-footer{
-    display: none;
     position: absolute;
     bottom: 0;
-    color: #333333;
-    background-color: #eeeeee;
+    color: whitesmoke;
+    background-color: #444444;
     text-align: center;
     width: 100%;
     border-bottom-left-radius: 0.3em;
@@ -66,9 +84,18 @@ textarea{
     padding: 0;
 }
 
-.solution-text-area{
+.big-text-area{
     height: 20em !important;
 }
+
+.medium-text-area{
+    height: 15em !important;
+}
+
+.small-text-area{
+    height: 10em !important;
+}
+
 
 .modal-submit-btn{
     color: whitesmoke;
@@ -82,10 +109,6 @@ textarea{
     margin-top: 1em;
 }
 
-.query-exp-text-area{
-    height: 10em !important;
-}
-
-.query-text-area{
-    height: 15em !important;
+.input-file{
+    margin-top: 1em;
 }

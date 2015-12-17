@@ -4,7 +4,12 @@ app.factory('localStorage', function($window){
             $window.localStorage[key] = JSON.stringify(value);
         },
         get: function(key){
-            return JSON.parse($window.localStorage[key]);
+            try{
+                return JSON.parse($window.localStorage[key]);
+            }
+            catch(err){
+                $window.localStorage[key] = JSON.stringify([]);
+            }
         }
     }
 })

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form name="addScriptForm" novalidate ng-submit="addScript()" class="form" method="post">
+    <div class="modal-header">
+        <h2 class="text-center">הוספת סקריפט</h2>
+    </div>
+
+    <div class="modal-body">
+        <div ng-class="{'has-error': addScriptForm.name.$invalid && addScriptForm.name.$dirty}">
+            <lable name="name" class="control-label"><h4 class="text-center">שם הסקריפט</h4></lable>
+            <div>
+                <input type="text" name="name" class="form-control" ng-model-options="{updateOn: 'blur'}" ng-model="script.name" ng-minlength="3" required placeholder="שם הסקריפט">
+            </div>
+        </div>
+
+        <div ng-class="{'has-error': addScriptForm.description.$invalid && addScriptForm.description.$dirty}">
+            <lable name="description" class="control-label"><h4 class="text-center">הסבר על הסקריפט</h4></lable>
+            <div>
+                <textarea type="text" name="description" class="form-control big-text-area" ng-model-options="{updateOn: 'blur'}" ng-model="script.description" ng-minlength="20" required placeholder="הסבר מפורט על הסקריפט ופעולותיו"></textarea>
+            </div>
+        </div>
+
+        <div>
+            <input class="input-file" type="file" required>
+        </div>
+
+        <div class="alert-danger verify-err">
+            <div ng-show="addScriptForm.name.$invalid && addScriptForm.name.$dirty">שם הסקריפט חייב להכיל 3 אותיות לפחות</div>
+            <div ng-show="addScriptForm.description.$invalid && addScriptForm.description.$dirty">ההסבר על הסקריפט צריך להיות מפורט ולהכיל 20 תווים לפחות</div>
+        </div>
+
+    </div>
+
+    <button type="submit" class="modal-submit-btn btn btn-block">הוסף סקריפט</button>
+
+</form>
+</body>
+</html>

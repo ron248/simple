@@ -8,16 +8,16 @@ app.config(function($stateProvider, $urlRouterProvider) {
         .state('homepage', {
             url: "/homepage",
             templateUrl: "app/components/homepage/homepage.html",
-            controller: "homepageController"
+            controller: "homepageController",
         })
         .state('systemPage',{
-            url: "/systemPage",
+            url: "/systemPage/",
             templateUrl: "app/components/systemPage/systemPage.html"
-
         })
         .state('scriptPage',{
             parent: "systemPage",
-            templateUrl: "app/components/systemPage/scriptPage/scriptPage.html"
+            templateUrl: "app/components/systemPage/scriptPage/scriptPage.html",
+            controller: "scriptController"
         })
         .state('queryPage',{
             parent: "systemPage",
@@ -31,13 +31,13 @@ app.config(function($stateProvider, $urlRouterProvider) {
         })
         .state('procedurePage',{
             parent: "systemPage",
-            templateUrl: "app/components/systemPage/procedurePage/procedurePage.html"
+            templateUrl: "app/components/systemPage/procedurePage/procedurePage.html",
+            controller: "procedureController"
         })
         .state('drawPage',{
             parent: "systemPage",
             templateUrl: "app/components/systemPage/drawPage/drawPage.html",
             controller: "drawController"
-
         })
     ;
 });

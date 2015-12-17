@@ -1,5 +1,4 @@
 app.controller('problemController', function($scope, $uibModal, $window ,localStorage){
-    localStorage.set('problemList', []);
     $scope.problemList = localStorage.get('problemList');
     $scope.problemOpen = function(){
         var modalInstance = $uibModal.open({

@@ -21,14 +21,14 @@
         <div ng-class="{'has-error': addQueryForm.explanation.$invalid && addQueryForm.explanation.$dirty}">
             <lable name="explanation" class="control-label"><h4 class="text-center">הסבר על השליפה</h4></lable>
             <div>
-                <textarea class="form-control query-exp-text-area" name="explanation" ng-model-options="{updateOn: 'blur'}" ng-model="query.explanation" ng-minlength="30" required  placeholder="הכנס הסבר מפורט על השליפה"></textarea>
+                <textarea class="form-control small-text-area" name="explanation" ng-model-options="{updateOn: 'blur'}" ng-model="query.explanation" ng-minlength="30" required  placeholder="הכנס הסבר מפורט על השליפה"></textarea>
             </div>
         </div>
 
         <div ng-class="{'has-error': addQueryForm.query.$invalid && addQueryForm.query.$dirty}">
             <lable name="query" class="control-label"><h4 class="text-center">השליפה</h4></lable>
             <div>
-                <textarea class="form-control query-text-area" name="query" ng-model-options="{updateOn: 'blur'}" ng-model="query.query" ng-minlength="30" required  placeholder="הכנס את השליפה עצמה"></textarea>
+                <textarea class="form-control medium-text-area" name="query" ng-model-options="{updateOn: 'blur'}" ng-model="query.query" ng-minlength="30" required  placeholder="הכנס את השליפה עצמה"></textarea>
             </div>
         </div>
 

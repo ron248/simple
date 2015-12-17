@@ -6,7 +6,7 @@
 </head>
 <body>
     <button type="button" class="btn btn-success col-sm-10"  ng-click="drawOpen()">הוסף שרטוט</button>
-    <div ng-repeat="draw in drawList">
+    <div ng-repeat="draw in drawList | filter:{system:systemChoose}">
         <h1 class="text-center">{{draw.name}}</h1>
         {{draw.system}}
     </div>

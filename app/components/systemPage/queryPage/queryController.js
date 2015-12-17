@@ -1,6 +1,5 @@
 app.controller('queryController', function($scope, $uibModal, localStorage){
-    localStorage.set('queryList', []);
-    $scope.problemList = localStorage.get('queryList');
+    $scope.queryList = localStorage.get('queryList');
     $scope.queryOpen = function(){
             var modalInstance = $uibModal.open({
                 templateUrl: 'app/components/systemPage/queryPage/addQueryModal.html',

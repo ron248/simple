@@ -5,6 +5,10 @@
     <title></title>
 </head>
 <body>
-<button type="button" class="btn btn-success">הוסף נוהל</button>
+<button type="button" class="btn btn-success col-sm-10"  ng-click="procedureOpen()">הוסף נוהל</button>
+<div ng-repeat="procedure in procedureList | filter:{system:systemChoose}">
+    <h1 class="text-center">{{procedure.name}}</h1>
+    {{procedure.system}}
+</div>
 </body>
 </html>

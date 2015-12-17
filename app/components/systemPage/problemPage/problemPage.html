@@ -6,7 +6,7 @@
 </head>
 <body>
 <button type="button" class="btn btn-success col-sm-10"  ng-click="problemOpen()">הוסף תקלה</button>
-<div ng-repeat="problem in problemList">
+<div ng-repeat="problem in problemList | filter:{system:systemChoose}">
     <div>סימפטום התקלה: {{problem.symptom}}</div>
     <div>פתרון התקלה: {{problem.solution}}</div>
     <div>שם המערכת: {{problem.system}}</div>

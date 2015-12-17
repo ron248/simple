@@ -19,6 +19,8 @@
     <script src="app/shared/localStorageService/localStorageService.js"></script>
     <script src="app/components/systemPage/queryPage/queryController.js"></script>
     <script src="app/components/systemPage/drawPage/drawController.js"></script>
+    <script src="app/components/systemPage/procedurePage/procedureController.js"></script>
+    <script src="app/components/systemPage/scriptPage/scriptController.js"></script>
 
 
 </head>
@@ -35,10 +37,10 @@
         <div class="form-group">
             <input type="text" class="form-control" placeholder="חיפוש..">
         </div>
-        <button type="submit" class="btn btn-default">חפש</button>
+        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
     </form>
 </nav>
-
 <div ui-view></div>
 </div>
 </body>

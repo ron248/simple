@@ -1,5 +1,4 @@
 app.controller('drawController', function($scope, $uibModal, $window ,localStorage){
-    localStorage.set('drawList', []);
     $scope.drawList = localStorage.get('drawList');
     $scope.drawOpen = function(){
         var modalInstance = $uibModal.open({

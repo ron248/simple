@@ -5,6 +5,11 @@
     <title></title>
 </head>
 <body>
-<button type="button" class="btn btn-success">הוסף סקירפט</button>
+<button type="button" class="btn btn-success col-sm-10"  ng-click="scriptOpen()">הוסף סקריפט</button>
+<div ng-repeat="script in scriptList | filter:{system:systemChoose}">
+    <h1 class="text-center">{{script.name}}</h1>
+    <div>תיאור הסקריפט: {{script.description}}</div>
+    {{script.system}}
+</div>
 </body>
 </html>
