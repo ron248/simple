@@ -5,11 +5,18 @@
     <title></title>
 </head>
 <body>
-<button type="button" class="btn btn-success col-sm-10"  ng-click="problemOpen()">הוסף תקלה</button>
-<div ng-repeat="problem in problemList | filter:{system:systemChoose}">
-    <div>סימפטום התקלה: {{problem.symptom}}</div>
-    <div>פתרון התקלה: {{problem.solution}}</div>
-    <div>שם המערכת: {{problem.system}}</div>
+<div class="container">
+    <div class="col-sm-12">
+        <h1 class="pagesHeader">תקלות ב{{systemChoose}}</h1>
+        <div class="problemContainer">
+            <div ng-repeat="problem in problemList | filter:{system:systemChoose}">
+                    <h4>סימפטום התקלה: {{problem.symptom}}</h4>
+                    <h5>פתרון התקלה: {{problem.solution}}</h5>
+                <hr>
+            </div>
+        </div>
+        <button type="button" class="btn btn-success col-sm-12"  ng-click="problemOpen()">הוסף תקלה</button>
+    </div>
 </div>
 </body>
 </html>

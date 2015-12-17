@@ -14,7 +14,7 @@ app.controller('problemController', function($scope, $uibModal, $window ,localSt
     }
 });
 
-app.controller('addProblemController', function($scope, $modalInstance, localStorage){
+app.controller('addProblemController', function($scope, $modalInstance){
     $scope.addProblem = function() {
         if ($scope.addProblemForm.$valid){
             $modalInstance.close($scope.problem);

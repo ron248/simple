@@ -5,9 +5,13 @@
 }
 
 body{
-    background-color: #dddddd;
+    background-color: #fffffe;
 }
 
+hr{
+    border-top: 1px solid #212121;
+
+}
 .nav-stacked{
     background-color: #1976D2;
     border-radius: 0.3em;
@@ -32,8 +36,13 @@ textarea{
 }
 
 @keyframes cards {
-    from{ transform:  scale(1)}
-    to{transform: scale(1.05)}
+    from{ transform:  scale(1); opacity: 0.85}
+    to{transform: scale(1.03); opacity: 1}
+}
+
+@keyframes cards-footer {
+    from{ opacity:  0.90}
+    to{opacity:  0}
 }
 
 .card-container{
@@ -42,15 +51,15 @@ textarea{
 }
 
 .system-card{
+    opacity: 0.85;
     display: inline-block;
-    border-radius: 0.3em;
+    border-radius: 0.2em;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 .card-img{
     width: 100%;
-    border-top-left-radius: 0.3em;
-    border-top-right-radius: 0.3em;
+    border-radius: 0.2em;
 }
 
 
@@ -58,24 +67,24 @@ textarea{
     /* Toggle our animation play state to running when we are hovering over our sticker */
     animation-name: cards;
     animation-fill-mode: forwards;
-    animation-duration: 0.1s;
+    animation-duration: 0.3s;
 }
 
 .system-card :hover ~ .card-footer{
-    display: none;
+    animation-name: cards-footer;
+    animation-fill-mode: forwards;
+    animation-duration: 0.3s;
 }
 
 .card-footer{
     position: absolute;
     bottom: 0;
+    margin: 0 auto;
     color: whitesmoke;
     background-color: #444444;
     text-align: center;
     width: 100%;
-    border-bottom-left-radius: 0.3em;
-    border-bottom-right-radius: 0.3em;
-    opacity: 0.95;
-
+    opacity: 0.90;
 }
 
 
@@ -111,4 +120,22 @@ textarea{
 
 .input-file{
     margin-top: 1em;
+}
+
+.pagesHeader{
+    text-align: center;
+    text-decoration: underline;
+    color: #2196F3;
+}
+.problemContainer{
+    background-color: whitesmoke;
+}
+
+.sidebar-header{
+    text-align: center;
+    color: whitesmoke;
+}
+
+.nav-stacked hr{
+    border-top: 1px solid whitesmoke;
 }
