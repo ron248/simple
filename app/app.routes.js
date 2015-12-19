@@ -12,7 +12,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
         })
         .state('systemPage',{
             url: "/systemPage/",
-            templateUrl: "app/components/systemPage/systemPage.html"
+            templateUrl: "app/components/systemPage/systemPage.html",
+            controller: "systemController"
         })
         .state('scriptPage',{
             parent: "systemPage",

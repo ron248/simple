@@ -1,4 +1,4 @@
-app.controller('homepageController', function($scope){
+app.controller('homepageController', function($scope, localStorage){
     $scope.systems = [
         {'name':'מערכת1', 'imgName': 'panda'},
         {'name':'מערכת2', 'imgName': 'indic'},
@@ -19,8 +19,8 @@ app.controller('homepageController', function($scope){
         {'name':'מערכת17', 'imgName': 'DMZ'}
     ];
 
-    /* set the user system choose after click on system to the mainController*/
+    /* set the user system choose after click on system to localStorage*/
     $scope.setSystemChoose = function(systemChoose){
-        $scope.$parent.systemChoose = systemChoose;
+        localStorage.set('systemChoose', systemChoose);
     }
 });

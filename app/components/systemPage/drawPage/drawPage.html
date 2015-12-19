@@ -9,8 +9,7 @@
     <div class="col-sm-12">
         <h1 class="pagesHeader">שרטוטים ל{{systemChoose}}</h1>
         <div ng-repeat="draw in drawList | filter:{system:systemChoose}">
-            <h1 class="text-center">{{draw.name}}</h1>
-            {{draw.system}}
+            <h3 class="text-center">{{draw.name}}</h3>
         </div>
         <button type="button" class="btn btn-success col-sm-12"  ng-click="drawOpen()">הוסף שרטוט</button>
     </div>

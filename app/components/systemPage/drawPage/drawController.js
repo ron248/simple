@@ -17,6 +17,7 @@ app.controller('drawController', function($scope, $uibModal, $window ,localStora
 app.controller('addDrawController', function($scope, $modalInstance, localStorage){
     $scope.addDraw = function() {
         if ($scope.addDrawForm.$valid){
+
             $modalInstance.close($scope.draw);
         }
     }

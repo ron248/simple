@@ -9,7 +9,7 @@
     <div class="col-sm-12">
         <h1 class="pagesHeader">נהלים ל{{systemChoose}}</h1>
         <div ng-repeat="procedure in procedureList | filter:{system:systemChoose}">
-            <h1 class="text-center">{{procedure.name}}</h1>
+            <h3 class="text-center">{{procedure.name}}</h3>
         </div>
         <button type="button" class="btn btn-success col-sm-12"  ng-click="procedureOpen()">הוסף נוהל</button>
     </div>

@@ -8,11 +8,16 @@
 <div class="container">
     <div class="col-sm-12">
         <h1 class="pagesHeader">שליפות ל{{systemChoose}}</h1>
-        <div ng-repeat="query in queryList | filter:{system:systemChoose}">
-            <div>{{query.name}}</div>
-            <div>{{query.explanation}}</div>
-            <div>{{query.query}}</div>
-            <div>{{query.system}}</div>
+        <div class="systemPageContainer">
+            <div ng-repeat="query in queryList | filter:{system:systemChoose}">
+                <h3 class="text-center">{{query.name}}</h3>
+                <h5 class="text-center">{{query.explanation}}</h5>
+                <h5 class="text-center
+
+                ">{{query.query}}</h5>
+                <button type="button" class="btn btn-danger col-sm-offset-10">הרץ שליפה</button>
+                <hr>
+            </div>
         </div>
         <button type="button" class="btn btn-success col-sm-12"  ng-click="queryOpen()">הוסף שליפה</button>
     </div>
