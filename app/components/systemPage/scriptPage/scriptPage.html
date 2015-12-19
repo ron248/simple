@@ -8,9 +8,13 @@
 <div class="container">
     <div class="col-sm-12">
         <h1 class="pagesHeader">סקריפטים ל{{systemChoose}}</h1>
-        <div ng-repeat="script in scriptList | filter:{system:systemChoose}">
-            <h1 class="text-center">{{script.name}}</h1>
-            <div>תיאור הסקריפט: {{script.description}}</div>
+        <div class="systemPageContainer">
+            <div ng-repeat="script in scriptList | filter:{system:systemChoose}">
+                <h3 class="text-center">{{script.name}}</h3>
+                <h5 class="text-center">תיאור הסקריפט: {{script.description}}</h5>
+                <button type="button" class="btn btn-danger col-sm-offset-10">הרץ סקריפט</button>
+                <hr>
+            </div>
         </div>
         <button type="button" class="btn btn-success col-sm-12"  ng-click="scriptOpen()">הוסף סקריפט</button>
     </div>

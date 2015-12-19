@@ -8,10 +8,10 @@
 <div class="container">
     <div class="col-sm-12">
         <h1 class="pagesHeader">תקלות ב{{systemChoose}}</h1>
-        <div class="problemContainer">
+        <div class="systemPageContainer">
             <div ng-repeat="problem in problemList | filter:{system:systemChoose}">
-                    <h4>סימפטום התקלה: {{problem.symptom}}</h4>
-                    <h5>פתרון התקלה: {{problem.solution}}</h5>
+                    <h3 class="text-center">סימפטום התקלה: {{problem.symptom}}</h3>
+                    <h5 class="text-center">פתרון התקלה: {{problem.solution}}</h5>
                 <hr>
             </div>
         </div>
